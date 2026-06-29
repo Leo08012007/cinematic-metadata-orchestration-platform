@@ -52,7 +52,7 @@ export default function Dashboard() {
     setError(null);
     try {
       // Fetching all movies to compute KPIs and widget lists dynamically
-      const res = await fetch("http://127.0.0.1:8000/movies?limit=5000");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/movies?limit=5000`);
       if (!res.ok) {
         throw new Error("Unable to fetch operational overview from the database server.");
       }

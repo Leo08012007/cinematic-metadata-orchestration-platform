@@ -91,7 +91,7 @@ export default async function MovieDetails({ params }: Props) {
 
   let movie;
   try {
-    const res = await fetch(`http://127.0.0.1:8000/movies/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/movies/${id}`, {
       cache: "no-store",
     });
 

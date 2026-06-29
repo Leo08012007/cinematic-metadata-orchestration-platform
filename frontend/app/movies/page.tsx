@@ -40,7 +40,7 @@ export default function Movies() {
     setIsLoading(true);
     setError(null);
     try {
-      const res = await fetch("http://127.0.0.1:8000/movies");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/movies`);
       if (!res.ok) {
         throw new Error("Failed to connect to the movies database.");
       }
@@ -64,7 +64,7 @@ export default function Movies() {
     setError(null);
     try {
       const res = await fetch(
-        `http://127.0.0.1:8000/movies/search?title=${encodeURIComponent(value)}`
+        `${process.env.NEXT_PUBLIC_API_URL}/movies/search?title=${encodeURIComponent(value)}`
       );
       if (!res.ok) {
         throw new Error("Failed to fetch search results from server.");
@@ -89,7 +89,7 @@ export default function Movies() {
     setError(null);
     try {
       const res = await fetch(
-        `http://127.0.0.1:8000/movies/language/${language}`
+        `${process.env.NEXT_PUBLIC_API_URL}/movies/language/${language}`
       );
       if (!res.ok) {
         throw new Error(`Failed to load movies for language code: ${language}`);
