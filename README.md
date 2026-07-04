@@ -236,3 +236,4 @@ SITER Academy, Norge
 
 ## ⭐ If you found this project useful, consider giving it a star!
 deployment link : https://cinematic-metadata-orchestration-pl.vercel.app/ 
+deployed in vercel and render for the frontend and backend respectively 
