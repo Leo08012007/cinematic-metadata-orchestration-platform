@@ -220,7 +220,7 @@ Contains information about:
 
 ---
 
-# 👩‍💻 Author
+# 👩‍💻 INFO
 
 **T. Mokshitha**
 
